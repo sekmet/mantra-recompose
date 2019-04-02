@@ -1,0 +1,45 @@
+{
+  "name": "mantra-recompose",
+  "version": "1.0.0",
+  "description": "Core API for Mantra Recompose Flavor. Originally by mantrajs.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sekmet/mantra-recompose.git"
+  },
+  "license": "MIT",
+  "options": {
+    "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
+  },
+  "scripts": {
+    "lint": "eslint ./src",
+    "lintfix": "eslint ./src --fix",
+    "testonly": "mocha $npm_package_options_mocha",
+    "test": "npm run lint && npm run testonly",
+    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/polyfill": "^7.x.x",
+    "@babel/preset-env": "^7.x.x",
+    "@babel/preset-react": "^7.x.x",
+    "@babel/register": "^7.x.x",
+    "ajv": "^6.10.0",
+    "babel-eslint": "^10.0.1",
+    "chai": "4.x.x",
+    "eslint": "^4.8.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-react": "4.3.x",
+    "mocha": "4.x.x",
+    "nodemon": "1.12.x",
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.x.x"
+  },
+  "peerDependencies": {
+    "recompose": "^0.30.0",
+    "react-mantra-di": "github:sekmet/react-mantra-di"
+  }
+}
